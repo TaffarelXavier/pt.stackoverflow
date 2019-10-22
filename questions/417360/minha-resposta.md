@@ -1,15 +1,15 @@
 https://pt.stackoverflow.com/questions/417467/post-n%c3%a3o-recebendo-input-do-form/417472#417472
 
-Você deve encontrar a entrada do tipo file, no seu caso, imagens, usando a matriz global $_FILES, não $_POST.
+> Você deve encontrar a entrada do tipo file, no seu caso, imagens, usando a matriz global $_FILES, não $_POST.
 
-Veja esta página para mais embasamento:
+> Veja esta página para mais embasamento:
 https://www.php.net/manual/pt_BR/features.file-upload.post-method.php
 https://www.php.net/manual/pt_BR/reserved.variables.files.php
 
-DEMO:
+##DEMO:##
 
-index_test.php:
-
+__index_test.php:__
+```html
 <form action="createsubmit.php" method="post" enctype="multipart/form-data">
         <div class="col-sm-8">
         <div class="form-group row">
@@ -27,14 +27,18 @@ index_test.php:
         </div>
         <button>Enviar</button>
 </form>
+```
+__createsubmit.php__
+```php
 createsubmit.php:
-
 <?php
 var_dump($_POST);
 var_dump($_FILES);
 var_dump($_FILES['pic']);
-Saída:
+```
 
+__Saída:__
+```php
 etc\createsubmit.php:4:
 array (size=1)
   'author' => string 'adfasd' (length=6)
@@ -54,3 +58,4 @@ array (size=5)
   'tmp_name' => string 'C:\wamp64\tmp\php4CF9.tmp' (length=25)
   'error' => int 0
   'size' => int 1611653
+  ```
