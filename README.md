@@ -1,2 +1,1 @@
-# pt.stackoverflow 
-# pt.stackoverflow 
+# Questões Respondidas em pt.stackoverflow 
