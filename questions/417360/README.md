@@ -1,10 +1,11 @@
+Questão:
 https://pt.stackoverflow.com/questions/417467/post-n%c3%a3o-recebendo-input-do-form/417472#417472
 
-> Você deve encontrar a entrada do tipo file, no seu caso, imagens, usando a matriz global $_FILES, não $_POST.
+> ## Você deve encontrar a entrada do tipo file, no seu caso, imagens, usando a matriz global $_FILES, não $_POST.
 
-> Veja esta página para mais embasamento:
-https://www.php.net/manual/pt_BR/features.file-upload.post-method.php
-https://www.php.net/manual/pt_BR/reserved.variables.files.php
+> ## Veja esta página para mais embasamento:
+> https://www.php.net/manual/pt_BR/features.file-upload.post-method.php
+> https://www.php.net/manual/pt_BR/reserved.variables.files.php
 
 ## __DEMO:__
 
