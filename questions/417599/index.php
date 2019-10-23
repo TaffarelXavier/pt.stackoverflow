@@ -47,19 +47,40 @@
                 </form>
             </div>
         </div>
-        <pre>
-<code>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    var_dump($_POST);
-}
-?>
-</code>
-</pre>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>SALDO</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    //Pega o tamanho de uma das duas matrizes, visto, que, pelo menos, teoricamente
+                    //ambas terão o mesmo tamanho.
+                    $tamanho = count($_POST['name']);
+                    //Aqui: intero pelo array
+                    for ($i = 0; $i < $tamanho; $i++) {
+                        echo '<tr>',
+                            '<td>',
+                            strtoupper($_POST['name'][$i]),
+                            '</td>',
+                            '<td>',
+                            $_POST['saldo'][$i],
+                            '</td>',
+                            '</tr>';
+                    }
+                }
+                ?>
+            </tbody>
+        </table>
 
     </div>
     <script>
         var incremento = -1;
+
         function myFunction() {
             incremento++;
             var table = document.getElementById("myTable");
